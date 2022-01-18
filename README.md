@@ -1,9 +1,17 @@
-# Getting Started with Create React App
+# React Table test countries
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Pasos a seguir:
 
-## Available Scripts
+1. Clona el proyecto en tu ordenador
 
-In the project directory, you can run:
+2. Ejecuta el siguiente comando en la consola
 
-### `npm start`
+### `npm i`
+
+3. Ejecuta el nuevamente siguiente comando en la consola
+
+### `npm run start`
+
+# Librerias utilizadas
+
+React table (`https://react-table.tanstack.com/docs/overview`)
