@@ -1,3 +1,22 @@
-.App {
+.table-container {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.buttons-container {
+  text-align: center;
+}
+
+.app-title {
+  text-align: center;
+}
+
+tbody tr:hover {
+  background-color: red;
+}
+td {
   text-align: center;
 }
