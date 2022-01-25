@@ -4,9 +4,9 @@ import ReactTable from "./components/ReactTable";
 
 function App() {
   const [tableData, setTableData] = useState(
-    /*localStorage.getItem("originalData") ||*/ []
+    JSON.parse(localStorage.getItem("originalData")) || []
   );
-  const [originalData, setOriginalData] = useState();
+  const [originalData, setOriginalData] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [coloredRows, setColoredRows] = useState(false);
@@ -23,14 +23,18 @@ function App() {
             `This is an HTTP error: The status is ${response.status}`
           );
         }
-        console.log(response);
+
         let actualData = await response.json();
+
         setTableData(actualData.results);
+
         setOriginalData(actualData.results);
+
         localStorage.setItem(
           "originalData",
           JSON.stringify(actualData.results)
         );
+
         setError(null);
       } catch (err) {
         setError(err.message);
@@ -39,7 +43,6 @@ function App() {
         setLoading(false);
       }
     };
-    setLoading(false);
 
     getData();
   }, []);
