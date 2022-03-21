@@ -14,8 +14,8 @@
   text-align: center;
 }
 
-tbody tr:hover {
-  background-color: red;
+tr:hover {
+  background-color: red !important;
 }
 td {
   text-align: center;
